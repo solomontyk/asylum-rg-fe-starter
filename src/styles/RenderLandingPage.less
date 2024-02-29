@@ -8,6 +8,7 @@
 @tablet-large: ~"(min-width: 769px) and (max-width: 1024px)";
 @laptop: ~"(min-width: 1025px) and (max-width: 1280px)";
 
+
 .header {
     background-color: @main-color;
     display:flex;
@@ -41,16 +42,55 @@
     font-size: 1.2rem;
 }
 
-// .graphs-section {
-//  ADD THIS BACK IN WHEN YOU HAVE THE GRAPHS SECTION
-// }
+.graphs-section {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+}
+
+.grant-rates-by-office-graph-container p {
+    margin-top: 10%;
+    font-size: 1.4rem;
+    font-family: 'acumin';
+}
+
+.gr-office-img {
+    width: 290px;
+    height: 220px;
+}
+
+.grant-rates-by-nationality-container p {
+    margin-top: 10%;
+    font-size: 1.4rem;
+    font-family: 'acumin';
+}
+
+.gr-nationality-img {
+    width: 290px;
+    height: 220px;
+}
+
+.grant-rates-over-time-container p {
+    margin-top: 10%;
+    font-size: 1.4rem;
+    font-family: 'acumin';
+}
+
+.gr-overtime-img {
+    width: 290px;
+    height: 220px;
+}
 
 .view-more-data-btn-container {
     height: 44px;
-    width: 180px;
+    width: 200px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    align-items: center;
+    display: flex;
 }
 
 .middle-section {
@@ -75,9 +115,78 @@
     font-size: 1.4rem;
 }
 
-// .bottom-section {
-//      ADD THIS BACK IN WHEN YOU HAVE A BOTTOM SECTION
-// }
+.bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bottom-header {
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    font-family: 'acumin';
+}
+
+.first-data-point-container {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    width: 22%;
+    text-align: center;
+}
+
+.first-data-point-container h2 {
+    font-size: 3rem;
+    font-family: 'acumin';
+}
+
+.first-data-point-container h3 {
+    font-size: 1rem;
+    font-family: 'acumin';
+}
+
+.second-data-point-container {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    width: 20%;
+    text-align: center;
+}
+
+.second-data-point-container h2 {
+    font-size: 3rem;
+    font-family: 'acumin';
+}
+
+.second-data-point-container h3 {
+    font-size: 1rem;
+    font-family: 'acumin';
+}
+
+.third-data-point-container {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    width: 20%;
+    text-align: center;
+}
+
+.third-data-point-container h2 {
+    font-size: 3rem;
+    font-family: 'acumin';
+}
+
+.third-data-point-container h3 {
+    font-size: 1rem;
+    font-family: 'acumin';
+}
+
+.read-more-button {
+    width: 8%;
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
 
 .back-to-top {
     width: 8%;
@@ -127,6 +236,7 @@
         font-size: .85rem;
         width: 85%;
         margin: 0 auto;
+        
     }
 
     .graphs-section {
