@@ -8,7 +8,7 @@ import '../../../styles/RenderLandingPage.less';
 import { Button } from 'antd';
 import { useHistory } from 'react-router-dom';
 // for the purposes of testing PageNav
-import PageNav from '../../common/PageNav';
+// import PageNav from '../../common/PageNav';
 
 function RenderLandingPage(props) {
   const scrollToTop = () => {
@@ -58,13 +58,20 @@ function RenderLandingPage(props) {
           <p>Search Grant Rates Over Time</p>
         </div>
       </div>
-      <div className="view-more-data-btn-container">
+      <div className="view-more-and-download-data-btn-container">
         <Button
           type="default"
           style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
           onClick={() => history.push('/graphs')}
         >
           View the Data
+        </Button>
+
+        <Button
+          type="default"
+          style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+        >
+          Download the Data
         </Button>
       </div>
 
@@ -80,7 +87,7 @@ function RenderLandingPage(props) {
             through a Freedom of Information Act request. You can search for
             information on asylum grant rates by year, nationality, and asylum
             office, visualize the data with charts and heat maps, and download
-            the data set
+            the data set.
           </h3>
         </div>
       </div>
@@ -112,6 +119,14 @@ function RenderLandingPage(props) {
                 asylum office."
               </h3>
             </div>
+          </div>
+          <div className="read-more-button">
+            <Button
+              type="default"
+              style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+            >
+              Read More
+            </Button>
           </div>
           <p onClick={() => scrollToTop()} className="back-to-top">
             Back To Top ^
