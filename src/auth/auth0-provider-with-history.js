@@ -9,19 +9,17 @@ const Auth0ProviderWithHistory = ({ children }) => {
   const history = useHistory();
 
   const onRedirectCallback = appState => {
-    history.push(appState?.returnTo || window.Location.pathname);
+    history.push(appState?.returnTo || window.location.pathname);
   };
   return (
-    <Auth0ProviderWithHistory>
-      <Auth0Provider
-        domain={domain}
-        clientId={clientId}
-        redirectUri={window.Location.origin}
-        onRedirectCallback={onRedirectCallback}
-      >
-        {children}
-      </Auth0Provider>
-    </Auth0ProviderWithHistory>
+    <Auth0Provider
+      domain={domain}
+      clientId={clientId}
+      redirectUri={window.location.origin}
+      onRedirectCallback={onRedirectCallback}
+    >
+      {children}
+    </Auth0Provider>
   );
 };
 

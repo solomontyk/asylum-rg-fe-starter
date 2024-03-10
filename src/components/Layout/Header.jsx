@@ -22,7 +22,7 @@ function HeaderContent() {
     >
       <div className="hrf-logo">
         <a href="https://www.humanrightsfirst.org/">
-          <Image width={100} src={Logo} preview={false} alt="HRF logo white" />
+          <Image width={150} src={Logo} preview={false} alt="HRF logo white" />
         </a>
       </div>
       <div className="links">

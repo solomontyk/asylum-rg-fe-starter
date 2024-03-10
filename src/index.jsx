@@ -23,20 +23,22 @@ import { configureStore } from '@reduxjs/toolkit';
 import reducer from './state/reducers';
 import { colors } from './styles/data_vis_colors';
 import { Auth0Provider } from '@auth0/auth0-react';
+import Auth0ProviderWithHistory from './auth/auth0-provider-with-history';
+import { ProfilePage } from './components/pages/profile';
 
 const { primary_accent_color } = colors;
 
 const store = configureStore({ reducer: reducer });
 ReactDOM.render(
-  <Auth0Provider>
-    <Router>
+  <Router>
+    <Auth0ProviderWithHistory>
       <Provider store={store}>
         <React.StrictMode>
           <App />
         </React.StrictMode>
       </Provider>
-    </Router>
-  </Auth0Provider>,
+    </Auth0ProviderWithHistory>
+  </Router>,
   document.getElementById('root')
 );
 
@@ -46,7 +48,7 @@ export function App() {
     <Layout>
       <Header
         style={{
-          height: '10vh',
+          height: '12vh',
           display: 'flex',
           alignItems: 'center',
           backgroundColor: primary_accent_color,
@@ -57,6 +59,7 @@ export function App() {
       <Switch>
         <Route path="/" exact component={LandingPage} />
         <Route path="/graphs" component={GraphsContainer} />
+        <Route path="/profile" component={ProfilePage} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer
